@@ -97,7 +97,7 @@ style={'textAlign': 'left', 'color': '#503D36',
                            {'label': 'Yearly Airline Delay Report', 'value': 'OPT2'}
                            ],
                   placeholder='Select a report type',
-                  style={'width': 80, 'padding': '3px',
+                  style={'width': 80%, 'padding': '3px',
                                 'font-size': '20px', 'text-align-last': 'center'}),
                                     # Place them next to each other using the division style
                                     ], style={'display':'flex'}),
@@ -133,7 +133,7 @@ style={'textAlign': 'left', 'color': '#503D36',
                                
                                 html.Div([ ], id='plot4'),
     
-                                html.Div([
+                          
                                         html.Div([ ], id='plot5')
                                 ], style={'display': 'flex'}),
                                 ])
@@ -142,11 +142,7 @@ style={'textAlign': 'left', 'color': '#503D36',
 # TASK4: Add 5 ouput components
 
 # Enter your code below. Make sure you have correct formatting.
-[Output(component_id='plot1', component_property='children'),
- Output(component_id='plot2', component_property='children'),
- Output(component_id='plot3', component_property='children'),
- Output(component_id='plot4', component_property='children'),
- Output(component_id='plot5', component_property='children')]
+
 
 
 @app.callback([Output(component_id='plot1', component_property='children'),
@@ -197,7 +193,7 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
             
             # TASK6: Number of flights flying to each state from each reporting airline
             # Enter your code below. Make sure you have correct formatting.
-            tree_fig = px.treemap(data, path=['DestState', 'Reporting_Airline'], 
+            tree_fig = px.tree_data(data, path=['DestState', 'Reporting_Airline'], 
                       values='Flights',
                       color='Flights',
                       color_continuous_scale='RdBu',
