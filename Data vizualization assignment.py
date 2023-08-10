@@ -134,7 +134,9 @@ style={'textAlign': 'center', 'color': '#503D36',
                                 html.Div([
                                         html.Div([ ], id='plot4'),
                                         html.Div([ ], id='plot5')
-                                ], style={'display': 'flex'}),
+                                ],
+                                         style={'display': 'flex'}),
+                               ])
                                
 
 # Callback function definition
