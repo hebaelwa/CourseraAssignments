@@ -72,7 +72,7 @@ def compute_data_choice_2(df):
 
 # Application layout
 app.layout = html.Div(children=[ html.H1('US Domestic Airline Flights Performance',
-style={'textAlign': 'left', 'color': '#503D36',
+style={'textAlign': 'center', 'color': '#503D36',
                                 'font-size': 24}),
                                 # TASK1: Add title to the dashboard
                                 
@@ -130,23 +130,17 @@ style={'textAlign': 'left', 'color': '#503D36',
                                 
                                 # TASK3: Add a division with two empty divisions inside. See above disvision for example.
                                 # Enter your code below. Make sure you have correct formatting.
-                               
-                                html.Div([ ], id='plot4'),
     
                                 html.Div([
+                                        html.Div([ ], id='plot4'),
                                         html.Div([ ], id='plot5')
                                 ], style={'display': 'flex'}),
-                                ])
+                               
 
 # Callback function definition
 # TASK4: Add 5 ouput components
 
 # Enter your code below. Make sure you have correct formatting.
-[Output(component_id='plot1', component_property='children'),
- Output(component_id='plot2', component_property='children'),
- Output(component_id='plot3', component_property='children'),
- Output(component_id='plot4', component_property='children'),
- Output(component_id='plot5', component_property='children')]
 
 
 @app.callback([Output(component_id='plot1', component_property='children'),
